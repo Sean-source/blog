@@ -14,9 +14,9 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      category: {
+      theme: {
         type: DataTypes.STRING,
-        defaultValue: "Personal"
+        defaultValue: "Miscellaneous"
       }
     });
     return Post;
