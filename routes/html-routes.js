@@ -1,5 +1,6 @@
 
 var path = require("path");
+var db = require("../models")
 
 module.exports = function(app) {
 
@@ -7,13 +8,16 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    db.Post.findAll({}).then(posts =>{
+      console.log("Posts: " , posts)
+      res.render("index", {blogs: posts})
+    })
   });
 
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
+  // // blog route loads blog.html
+  // app.get("/blog", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/blog.html"));
+  // });
 
 };
