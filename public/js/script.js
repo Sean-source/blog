@@ -8,13 +8,11 @@ $(document).ready(function () {
     //     })
     // }
 
-    function setPosts() {
+    
 
 
-    }
 
     function completeBlog() {
-
 
         $('.update-item').on("click", function (event) {
             const id = $(this).attr("data-id")
