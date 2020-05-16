@@ -15,15 +15,13 @@
             <br>
             <h6>Title</h6>
             <div class="form-group">
-                <input type="text" class="form-control" id="exampleFormControlInput1" data-id="{{dataValues.title}}"
-                    placeholder="">
+                <input type="text" class="form-control" id="items" placeholder="">
             </div>
             <br>
             <h6>Description</h6>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    data-id="{{dataValues.body}}"></textarea>
+                <textarea class="form-control" id="description" rows="3"></textarea>
             </div>
             <button class="btn btn-primary" id="add-item" data-id="{{dataValues.id}}"
                 data-complete="{{dataValues.complete}}">Add new to the blog</button>
@@ -39,7 +37,6 @@
                 {{#each blogs}}
                 {{#if dataValues.complete}}
                 <div class="media">
-                    <img src="..." class="mr-3" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0">{{dataValues.title}}</h5>
                         {{dataValues.body}}

@@ -28,6 +28,7 @@ module.exports = function (app) {
             title: req.body.title,
             body: req.body.body
         }).then(post => {
+            console.log(post);
             res.json(post);
         })
     })
@@ -37,7 +38,7 @@ module.exports = function (app) {
         db.Post.destroy({
             where: { id: req.params.id }
         }).then(post => {
-            console.log(post);
+            
             res.json(post);
         })
     })
@@ -48,6 +49,7 @@ module.exports = function (app) {
             {
                 where: { id: req.params.id }
             }).then(post => {
+                console.log(res.json(post));
                 res.json(post);
             })
     })
