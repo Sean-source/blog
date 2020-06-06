@@ -1,0 +1,30 @@
+<div class="container">
+    <header class="header">
+        <h2>
+            Post a New Blog
+        </h2>
+    </header>
+    <hr>
+    <br>
+    <br>
+</div>
+<div class="container">
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <h4>New Blog Post</h4>
+            <br>
+            <h6>Title</h6>
+            <div class="form-group">
+                <input type="text" class="form-control" id="items" placeholder="">
+            </div>
+            <br>
+            <h6>Description</h6>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary" id="add-item" data-id="{{dataValues.id}}"
+                data-complete="{{dataValues.complete}}">Add new to the blog</button>
+        </div>
+    </div>
+    <br>
